@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: >-
+  A simple GO backend with a RESTful API endpoint using Amazon API Gateway.
+Resources:
+  goMicroservicehttpendpoint:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Description: >-
+        A simple GO backend with a RESTful API endpoint using Amazon API Gateway.
+      PackageType: Image
+      Architectures:
+      - x86_64
+      MemorySize: 128
+      Timeout: 10
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /users
+            Method: ANY
+    Metadata:
+      DockerTag: provided.al2023-v1
+      DockerContext: ./users-crud
+      Dockerfile: Dockerfile
