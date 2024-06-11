@@ -19,14 +19,14 @@ type RequestPayload struct {
 
 type ResponsePayload struct {
 	ID   string `json:"id"`
-	Job  string `json:"job",omitempty`
-	Name string `json:"name",omitempty`
+	Job  string `json:"job,omitempty"`
+	Name string `json:"name,omitempty"`
 	Data struct {
-		Email   string `json:"email",omitempty`
-		Name    string `json:"first_name",omitempty`
-		Surname string `json:"last_name",omitempty`
-		Avatar  string `json:"avatar",omitempty`
-	} `json:"data",omitempty`
+		Email   string `json:"email,omitempty"`
+		Name    string `json:"first_name,omitempty"`
+		Surname string `json:"last_name,omitempty"`
+		Avatar  string `json:"avatar,omitempty"`
+	} `json:"data,omitempty"`
 }
 
 const (
